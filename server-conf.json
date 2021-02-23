@@ -1,8 +1,7 @@
 {
-  "QSEAL": "",
-  "QWACK": "",
-  "QWACK-passowrd": "",
-  "Api-Enviorment": "",
-  "Api-Type": "",
-  "Callback-URL": ""
+  "QSEAL": "TPP-1-QCEALC.cer",
+  "QWACK": "TPP-1-QWAC.pfx",
+  "QWACK-passowrd": "password",
+  "Api-Enviorment": "nlb-dev-pepper-ob-nginx-a97b669bfca82f01.elb.eu-west-1.amazonaws.com",
+  "Api-Type": "Dev/sandbox"
 }
