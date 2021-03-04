@@ -26,7 +26,7 @@ async function readQwack() {
         mtlsContents,
         { p12Password: 'password' },
         (err, result) => {
-          console.log(`error ${err}`);
+          console.log(`result ${JSON.stringify(result)}`);
           resolve(result);
         }
       );

@@ -122,6 +122,13 @@ async function approveConsent(psuId, consentId, tppId) {
 }
 exports.approveConsent = approveConsent;
 
+function getCodeVerifier(){
+  let codeVerifier = createVerifier();
+  console.log('CODEVERYFIER', codeVerifier);
+  return codeVerifier;
+}
+exports.getCodeVerifier = getCodeVerifier;
+
 async function callApproveConsent(psuId, consentId, tppId) {
   let body = {
     codeChallengeMethod: 'S256',
@@ -172,7 +179,7 @@ async function callApproveConsent(psuId, consentId, tppId) {
       },
       'POST',
       JSON.stringify(body),
-      qwack
+      undefined
     );
   } catch (error) {
     return { message: error.message, status: 'FAILED' };

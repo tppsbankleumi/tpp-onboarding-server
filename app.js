@@ -3,7 +3,11 @@ var cors = require('cors');
 const app = express();
 app.use(cors());
 const port = 3000;
-const { createConsent, approveConsent } = require('./api/consentApi');
+const {
+  createConsent,
+  getCodeVerifier,
+  approveConsent,
+} = require('./api/consentApi');
 const { createToken } = require('./api/tokenApi');
 const { getAccounts } = require('./api/accountsApi');
 const { getBalances } = require('./api/balancesApi');
@@ -79,6 +83,12 @@ app.get('/transacrtions/:token/:consentId/:resourceId', async (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   console.log(transacrtions);
   res.send(transacrtions.body);
+});
+
+app.get('/getCodeVerifier', (req, res) => {
+  let codeVerifier = getCodeVerifier();
+  res.setHeader('Content-Type', 'application/json');
+  res.send(codeVerifier);
 });
 
 app.listen(port, () => {

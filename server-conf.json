@@ -1,7 +1,8 @@
 {
-  "QSEAL": "TPP-1-QCEALC.cer",
-  "QWACK": "TPP-1-QWAC.pfx",
+  "QSEAL": "Riseup_SEAL.crt",
+  "QWACK": "Riseup_TLS.pfx",
   "QWACK-passowrd": "password",
-  "Api-Enviorment": "nlb-dev-pepper-ob-nginx-a97b669bfca82f01.elb.eu-west-1.amazonaws.com",
-  "Api-Type": "Dev/sandbox"
+  "Api-Enviorment": "nlb-stg-ob-nginx-fintechs-dd69ba502e5af5a9.elb.eu-west-1.amazonaws.com",
+  "Api-Type": "Dev/sandbox",
+  "Callback-URL": "https://1453a6202a10.ngrok.io"
 }
